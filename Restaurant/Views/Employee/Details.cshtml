@@ -1,0 +1,129 @@
+﻿@model Restaurant.Models.EmployeeViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details about this employee</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonDetails.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonDetails.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonDetails.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonDetails.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonDetails.Age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonDetails.Age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Function)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Function)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonDetails.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonDetails.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonDetails.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonDetails.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonDetails.AddressDetails.Region)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonDetails.AddressDetails.Region)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonDetails.AddressDetails.City)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonDetails.AddressDetails.City)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonDetails.AddressDetails.Street)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonDetails.AddressDetails.Street)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonDetails.AddressDetails.Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonDetails.AddressDetails.Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonDetails.AddressDetails.Apartment)
+        </dt>
+       
+        <dd>
+            @if (Model.PersonDetails.AddressDetails.Apartment > 0)
+            {
+                @Html.DisplayFor(model => model.PersonDetails.AddressDetails.Apartment)
+            }
+            else
+            {
+                @Html.Raw("-")
+            }
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Salary)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Salary)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <input type="button" style="margin-left:0%;" value="Edit" class="btn btn-default" onclick="location.href='@Url.Action("Edit",new { id=Model.ID})'" />
+    <input type="button" style="margin-left:10%;" class="btn btn-default" value="Back to Menu" onclick="location.href='@Url.Action("Index")'" />
+</div>

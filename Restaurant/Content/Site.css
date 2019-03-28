@@ -1,0 +1,90 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+img.galery {
+    display: inline-block;
+    height: 75px;
+    width: 75px;
+    margin: auto;
+    border-radius: 50%;
+}
+
+img.myPhoto {
+    display: inline-block;
+    margin: auto;
+    border-radius: 40%;
+    margin: auto;
+    margin-left: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+.grid-item {
+    align-content: center;
+    width: 200px;
+    height: auto;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.myContainerClass {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 10px;
+    margin-top: 25px;
+}
+
+#myCustomTable {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#myCustomTable td, #myCustomTable th {
+    padding: 8px;
+    text-align: center;
+}
+
+#myCustomTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#myCustomTable tr:hover {
+    background-color: #ddd;
+}
+
+#myCustomTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #1351d8;
+    color: white;
+}

@@ -1,0 +1,73 @@
+﻿@*@model IEnumerable<Restaurant.Models.ReservationViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<input type="button" style="margin-top:15px;margin-bottom:15px" class="btn btn-default" value="Make a reservation" onclick="location.href='@Url.Action("Create")'" />
+<table id="myCustomTable">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(modelItem => modelItem.CustomerDetails.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(modelItem => modelItem.CustomerDetails.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(modelItem => modelItem.CustomerDetails.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(modelItem => modelItem.CustomerDetails.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(modelItem => modelItem.TableNo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(modelItem => modelItem.Date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(modelItem => modelItem.PersNo)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerDetails.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerDetails.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerDetails.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerDetails.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TableNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PersNo)
+            </td>
+            <td>
+                <input type="button" style="margin-top:5px;margin-bottom:5px" class="btn btn-default" value="Edit" onclick="location.href='@Url.Action("Edit", new { id = item.ID })'" />
+                <input type="button" style="margin-top:5px;margin-bottom:5px" class="btn btn-default" value="Details" onclick="location.href='@Url.Action("Details", new { id = item.ID })'" />
+                <input type="button" style="margin-top:5px;margin-bottom:5px" class="btn btn-default" value="Delete" onclick="location.href='@Url.Action("Delete", new { id = item.ID })'" />
+            </td>
+        </tr>
+    }
+
+</table>
+<div class="grid-container">
+    <img class="galery" src="@Url.Action("GetImage", "Image", new { id = 1 })" />
+    <img class="galery " src="@Url.Action("GetImage", "Image", new { id = 2 })" />
+    <img class="galery" src="@Url.Action("GetImage", "Image", new { id = 3 })" />
+</div>*@
+

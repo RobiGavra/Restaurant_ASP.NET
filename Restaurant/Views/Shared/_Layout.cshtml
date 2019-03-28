@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My Restaurant</title>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/Content/reservation")
+    @Scripts.Render("~/angular/scripts")
+
+    @Styles.Render("~/angular/styles")
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Trei frati", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Menu", "Index", "Food")</li>
+                    <li>@Html.ActionLink("Reservation", "Index", "Reservation")</li>
+                    <li>@Html.ActionLink("Staff", "Index", "Employee")</li>
+                    <li>@Html.ActionLink("Images", "UploadImage", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <my-app></my-app>
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>Trei frati - Restaurant <br> @DateTime.Now.ToString("dd/MMMM/yyyy")  </p>
+        </footer>
+    </div>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

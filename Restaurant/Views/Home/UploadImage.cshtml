@@ -1,0 +1,22 @@
+﻿@*<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Upload</title>
+</head>
+<body>
+
+    @using (Html.BeginForm("SaveImages","Image",FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <fieldset>
+            <legend> Upload Image </legend>
+            <label for="Image">Image</label>
+            <input type="file" class="btn btn-default" name="Image1" />
+            <input type="file" class="btn btn-default" name="Image2" />
+            <input type="file" class="btn btn-default" name="Image3" />
+            <br />
+            <input type="submit" value="Upload" class="btn btn-default"/>
+        </fieldset>
+        @ViewBag.Message
+    }
+</body>
+</html>*@

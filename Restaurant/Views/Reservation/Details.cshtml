@@ -1,0 +1,74 @@
+﻿@*@model Restaurant.Models.ReservationViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details about your reservation</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(modelItem => modelItem.CustomerDetails.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerDetails.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(modelItem => modelItem.CustomerDetails.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerDetails.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(modelItem => modelItem.CustomerDetails.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerDetails.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(modelItem => modelItem.CustomerDetails.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CustomerDetails.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(modelItem => modelItem.TableNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TableNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(modelItem => modelItem.Date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(modelItem => modelItem.PersNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersNo)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <input type="button" style="margin-left:0%;" value="Edit" class="btn btn-default" onclick="location.href='@Url.Action("Edit",new { id=Model.ID})'" />
+    <input type="button" style="margin-left:10%;" class="btn btn-default" value="Back to Menu" onclick="location.href='@Url.Action("Index")'" />
+</div>*@

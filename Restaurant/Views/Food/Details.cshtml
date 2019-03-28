@@ -1,0 +1,58 @@
+﻿@*@model Restaurant.Models.FoodViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details about your item</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Category)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Category)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ingredients)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ingredients)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </dt>
+
+        <dd>
+            @string.Format("{0} gr", Html.DisplayFor(model => model.Quantity))
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @string.Format("{0:C}", Model.Price)
+        </dd>
+
+    </dl>
+</div>
+<div>
+    <input type="button" style="margin-left:0%;" value="Edit" class="btn btn-default" onclick="location.href='@Url.Action("Edit",new { id=Model.ID})'" />
+    <input type="button" style="margin-left:10%;" class="btn btn-default" value="Back to Menu" onclick="location.href='@Url.Action("Index")'" />
+</div>*@
